@@ -5,7 +5,8 @@ var logger = require('morgan');
 const { MongoClient } = require('mongodb');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var usersRouter = require('./routes/users'); //users routern
+var productsRouter = require('./routes/products'); //products routern
 
 var app = express();
 
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/api/users', usersRouter);
+app.use('/api/users', usersRouter); //users routern
+app.use('/api/products', productsRouter); //products routern
 
 module.exports = app;
