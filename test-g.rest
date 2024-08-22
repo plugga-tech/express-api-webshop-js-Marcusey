@@ -57,8 +57,8 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-  "email": "// EN USER EMAIL",
-  "password": "// EN USER EMAIL"
+  "email": "mussepigg@mail.com",
+  "password": "mussepigg"
 }
 
 ###
@@ -75,8 +75,23 @@ GET http://localhost:3000/api/products
 ###
 
 // HÄMTA SPECIFIK PRODUKT
-GET http://localhost:3000/api/products/ // ID PÅ PRODUKT
+GET http://localhost:3000/api/products/66c79d183be53b5eb77f2f34
 
+  {
+        "_id": "66c79d183be53b5eb77f2f34",
+        "name": "Blueberry milkshake",
+        "description": "Milkshake with a taste of blueberries",
+        "price": 80,
+        "lager": 10
+    }
+///
+{
+    "_id": "66c7a1d45a1b6cf146eb0e55",
+    "name": "Maräng",
+    "description": "Rosa maräng med en touch av socker",
+    "price": 35,
+    "lager": 8
+}
 ###
 
 // SKAPA PRODUKT
