@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
         const product = await req.app.locals.db.collection('products').findOne({ _id: new ObjectId(productId) });
 
         if (!product) {
-            return res.status(404).json({ error: 'Produkten kan inte hittas' });
+            return res.status(404).json({ error: 'Product could not be found! Sorry!' });
         }
 
         res.status(200).json(product);
